@@ -125,11 +125,22 @@
         </q-card-section>
       </q-card>
     </div>
+    <q-page-sticky
+      position="bottom-right"
+      style="z-index: 10"
+      :offset="[18, 18]"
+    >
+      <q-btn fab icon="download" color="purple-8" @click="printPage()" />
+    </q-page-sticky>
   </q-page>
 </template>
 
 <script setup>
 import ResumeCard from "components/ResumeCard.vue";
+
+const printPage = () => {
+  window.print();
+};
 const skillList = [
   {
     src: "html5.svg",
