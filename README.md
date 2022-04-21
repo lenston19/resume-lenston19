@@ -1,6 +1,4 @@
-# resume (resume-lenston19)
-
-resume
+# [Resume](https://resume-lenston19.vercel.app/)
 
 ## Install the dependencies
 ```bash
