@@ -1,0 +1,105 @@
+@charset 'UTF-8'
+
+html
+  font-size: 16px
+  font-family: "Golos" !important
+
+body
+  font-size: 1rem
+  font-family: "Golos" !important
+
+a
+  color: inherit
+  text-decoration: none
+
+p
+  padding: 0
+  margin: 0
+  font-family: "Golos"
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-weight: 600
+  margin: 0
+  padding: 0
+
+h1
+  font-size: 3rem
+h2
+  font-size: 2rem
+h3
+  font-size: 1.5rem
+h4
+  font-size: 1.3rem
+h5
+  font-size: 1.2rem
+h6
+  font-size: 1.1rem
+
+.bg-transparent
+  background: transparent
+
+.bg-glass
+  background-color: #0000001a
+  backdrop-filter: blur(7px)
+
+.link__text-decoration
+  position: relative
+  width: fit-content
+  height: fit-content
+  &::before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 5%
+    background-color: currentColor
+    height: 2px
+    width: 0%
+    opacity: 0
+    transition: .3s all
+  &:hover
+    &::before
+      opacity: 1
+      width: 90%
+
+.q-container
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+
+.q-avatar
+  border-radius: 50% !important
+
+.animate-duration-4
+  --animate-duration: .4s
+
+.w-100
+  width: 100%
+
+.hide-scroll
+  scrollbar-width: none
+  &::-webkit-scrollbar,
+  textarea::-webkit-scrollbar
+    display: none
+
+@media (max-width: 425px)
+  html
+    font-size: 12px
+
+@media (min-width: 768px)
+  .q-container
+    width: 750px
+
+@media (min-width: 992px)
+  .q-container
+    width: 970px
+
+@media (min-width: 1200px)
+  .q-container
+    width: 1170px
