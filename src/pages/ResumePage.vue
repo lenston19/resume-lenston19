@@ -1,7 +1,7 @@
 <template>
   <q-page class="resume q-py-md">
     <div class="q-container resume__container">
-      <q-card class="q-pa-md resume-card">
+      <q-card class="q-pa-md resume-card waves">
         <q-card-section class="row">
           <div class="col-12 text-center">
             <div class="text-h3 text-weight-medium">Дмитрий Смолоногов</div>
@@ -12,7 +12,15 @@
         </q-card-section>
         <q-card-section class="row q-col-gutter-md q-py-none">
           <div class="col-12 col-sm-6 col-md-6">
-            <ResumeCard title="About">About Text</ResumeCard>
+            <ResumeCard title="Обо мне">
+              <div class="text-body1">
+                Разработка для меня является одновременно работой и хобби.
+              </div>
+              <div class="text-body1">
+                Увлекаюсь детальным просмотром принципов работы систем, для
+                дальнейшего понимания принципов работы с ее функционалом.
+              </div>
+            </ResumeCard>
 
             <ResumeCard title="Образование">
               <div class="q-mb-sm flex justify-between">
@@ -57,15 +65,15 @@
           </div>
 
           <div class="col-12 col-sm-6 col-md-6">
-            <ResumeCard title="Навыки">
-              <q-list class="row">
+            <ResumeCard title="Навыки" class="resume-skills">
+              <q-list class="row justify-center">
                 <q-item
                   v-for="skill in skillList"
                   :key="skill.name"
-                  class="col-3"
+                  class="col-md-3 col-sm-6 flex-center"
                 >
-                  <q-img
-                    width="70px"
+                  <img
+                    class="resume-skills__image"
                     :src="require(`assets/icons/${skill.src}`)"
                     :alt="skill.alt"
                   />
@@ -125,22 +133,12 @@
         </q-card-section>
       </q-card>
     </div>
-    <q-page-sticky
-      position="bottom-right"
-      style="z-index: 10"
-      :offset="[18, 18]"
-    >
-      <q-btn fab icon="download" color="purple-8" @click="printPage()" />
-    </q-page-sticky>
   </q-page>
 </template>
 
 <script setup>
 import ResumeCard from "components/ResumeCard.vue";
 
-const printPage = () => {
-  window.print();
-};
 const skillList = [
   {
     src: "html5.svg",
