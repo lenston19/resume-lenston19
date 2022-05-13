@@ -18,7 +18,8 @@
               </div>
               <div class="text-body1">
                 Увлекаюсь детальным просмотром принципов работы систем, для
-                дальнейшего понимания принципов работы с ее функционалом.
+                дальнейшего понимания взаимодействия с ее функционалом и
+                архитектурой.
               </div>
             </ResumeCard>
 
@@ -91,9 +92,9 @@
                 </ol>
               </q-card-section>
             </ResumeCard>
-            <ResumeCard title="Достижения">
+            <ResumeCard title="Хакатоны">
               <q-list>
-                <q-item-label header>Призер хакатонов:</q-item-label>
+                <q-item-label header>Призер:</q-item-label>
                 <q-item v-for="hack in hackathonList" :key="hack.name">
                   <q-item-section>
                     <div class="text-body2">{{ hack.name }}</div>
