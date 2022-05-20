@@ -1,17 +1,10 @@
 <template>
   <div class="container intro">
     <div class="row justify-center">
-      <div class="col-8">
-        <transition
-          appear
-          enter-active-class="animated bounceInLeft"
-          leave-active-class="animated fadeOut"
-        >
-          <div class="text-h5 intro__title">
-            A long time ago in a galaxy <br />
-            far, far away...
-          </div>
-        </transition>
+      <div class="col-12">
+        <div class="text-h5 intro__title">
+          A long time ago in a galaxy far, <br />far away....
+        </div>
       </div>
     </div>
   </div>
