@@ -1,0 +1,20 @@
+{
+  "extends": "@quasar/app-vite/tsconfig-preset",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "app/*": ["*"],
+      "components/*": ["src/components/*"],
+      "layouts/*": ["src/layouts/*"],
+      "pages/*": ["src/pages/*"],
+      "assets/*": ["src/assets/*"],
+      "boot/*": ["src/boot/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "images/*": ["./src/assets/images/*"],
+      "models": ["./src/models/index.ts"],
+      "store/*": ["./src/store/*"]
+    }
+  },
+  "exclude": ["dist", ".quasar", "node_modules"]
+}
