@@ -30,7 +30,7 @@
     </q-card-section>
     <q-card-actions align="right">
       <q-btn
-        size="1.3rem"
+        size="1rem"
         flat
         rounded
         icon="las la-link"
@@ -40,7 +40,7 @@
 
       <q-btn
         :disable="project.content.github === ''"
-        size="1.3rem"
+        size="1rem"
         flat
         rounded
         icon="lab la-github"

@@ -24,27 +24,36 @@
             </ResumeCard>
 
             <ResumeCard title="Образование">
-              <div class="q-mb-sm flex justify-between">
-                <div class="text-h6">РГЭУ(РИНХ)</div>
-                <div class="text-overline">(2018-2022)</div>
+              <div>
+                <div class="q-mb-sm flex justify-between">
+                  <div class="text-h6">РГЭУ(РИНХ)</div>
+                  <div class="text-overline">(2018-2022)</div>
+                </div>
+                <p class="text-body2 q-mb-sm">
+                  Факультет компьютерных технологий и информационной безопасности
+                </p>
+                <p class="text-body2">Информационные системы и технологии</p>
               </div>
-              <p class="text-body2 q-mb-sm">
-                Факультет компьютерных технологий и информационной безопасности
-              </p>
-              <p class="text-body2">Информационные системы и технологии</p>
+              <q-separator class="q-my-md" />
+              <div>
+                <div class="q-mb-sm flex justify-between">
+                  <div class="text-h6">РГЭУ(РИНХ)</div>
+                  <div class="text-overline">(2022-2024)</div>
+                </div>
+                <p class="text-body2 q-mb-sm">
+                  Институт магистратуры
+                </p>
+                <p class="text-body2">Машинное обучение и технологии больших данных</p>
+              </div>
             </ResumeCard>
 
             <ResumeCard title="Опыт работы">
               <q-list>
-                <q-item
-                  ><q-item-section>
+                <q-item><q-item-section>
                     <q-item-label overline>FullStack разработчик</q-item-label>
                     <q-item-label>РГЭУ (РИНХ)</q-item-label>
-                    <q-item-label caption
-                      >Март 2021 — настоящее время</q-item-label
-                    >
-                  </q-item-section></q-item
-                >
+                    <q-item-label caption>Март 2021 — настоящее время</q-item-label>
+                  </q-item-section></q-item>
               </q-list>
             </ResumeCard>
 
@@ -55,27 +64,28 @@
                     <q-item-label lines="1">Русский</q-item-label>
                   </q-item-section>
                 </q-item>
-                <q-item
-                  ><q-item-section>
+                <q-item><q-item-section>
                     <q-item-label lines="1">Английский</q-item-label>
                     <q-item-label caption>на уровне документации</q-item-label>
-                  </q-item-section></q-item
-                >
+                  </q-item-section></q-item>
               </q-list>
             </ResumeCard>
           </div>
 
           <div class="col-12 col-sm-6 col-md-6">
-            <ResumeCard title="Навыки" class="resume-skills">
+            <ResumeCard
+              title="Навыки"
+              class="resume-skills"
+            >
               <q-list class="row justify-center">
                 <q-item
                   v-for="skill in skillList"
-                  :key="skill.name"
+                  :key="skill.alt"
                   class="col-md-3 col-sm-6 flex-center"
                 >
                   <img
                     class="resume-skills__image"
-                    :src="require(`assets/icons/${skill.src}`)"
+                    :src="getImageUrl(skill.src)"
                     :alt="skill.alt"
                   />
                 </q-item>
@@ -95,12 +105,21 @@
             <ResumeCard title="Хакатоны">
               <q-list>
                 <q-item-label header>Призер:</q-item-label>
-                <q-item v-for="hack in hackathonList" :key="hack.name">
+                <q-item
+                  v-for="hack in hackathonList"
+                  :key="hack.name"
+                >
                   <q-item-section>
                     <div class="text-body2">{{ hack.name }}</div>
                   </q-item-section>
-                  <q-item-section side top>
-                    <q-badge color="purple-9" :label="hack.year" />
+                  <q-item-section
+                    side
+                    top
+                  >
+                    <q-badge
+                      color="purple-9"
+                      :label="hack.year"
+                    />
                   </q-item-section>
                 </q-item>
               </q-list>
@@ -122,7 +141,11 @@
                   >
                     <q-item-section>
                       <div class="row items-center">
-                        <q-icon size="2rem" :name="link.icon" class="q-mr-sm" />
+                        <q-icon
+                          size="2rem"
+                          :name="link.icon"
+                          class="q-mr-sm"
+                        />
                         <div class="text-body2">{{ link.url }}</div>
                       </div>
                     </q-item-section>
@@ -137,67 +160,68 @@
   </q-page>
 </template>
 
-<script setup>
-import ResumeCard from "components/ResumeCard.vue";
+<script setup lang="ts">
+import ResumeCard from 'components/ResumeCard.vue';
+import type { ISkill, ILink, IHackathon } from 'models'
 
-const skillList = [
+const getImageUrl = (name: string) => {
+  return new URL(`../assets/icons/${name}`, import.meta.url).href
+}
+
+const skillList = <ISkill[]>[
   {
-    src: "html5.svg",
-    alt: "HTML5",
+    src: 'html5.svg',
+    alt: 'HTML5',
   },
   {
-    src: "sass.svg",
-    alt: "Sass",
+    src: 'sass.svg',
+    alt: 'Sass',
   },
   {
-    src: "vue.svg",
-    alt: "VueJS",
+    src: 'vue.svg',
+    alt: 'VueJS',
   },
   {
-    src: "quasar.svg",
-    alt: "Quasar Framework",
+    src: 'quasar.svg',
+    alt: 'Quasar Framework',
   },
   {
-    src: "ts.svg",
-    alt: "TypeScript",
+    src: 'ts.svg',
+    alt: 'TypeScript',
   },
   {
-    src: "git.svg",
-    alt: "Git",
+    src: 'git.svg',
+    alt: 'Git',
   },
   {
-    src: "python.svg",
-    alt: "Python",
-  },
-  {
-    src: "django.svg",
-    alt: "Django",
-  },
-];
-const linkList = [
-  {
-    url: "t.me/lenston19",
-    type: "url",
-    icon: "lab la-telegram",
-  },
-  {
-    url: "github.com/lenston19",
-    type: "url",
-    icon: "lab la-github",
+    src: 'nuxt.svg',
+    alt: 'Nuxt',
   },
 ];
-const hackathonList = [
+const linkList = <ILink[]>[
   {
-    name: "InvestTech",
-    year: "2021",
+    url: 't.me/lenston19',
+    type: 'url',
+    icon: 'lab la-telegram',
   },
   {
-    name: "Tender Hack",
-    year: "2021",
+    url: 'github.com/lenston19',
+    type: 'url',
+    icon: 'lab la-github',
+  },
+];
+const hackathonList = <IHackathon[]>[
+  {
+    name: 'InvestTech',
+    year: '2021',
   },
   {
-    name: "Human Hack",
-    year: "2022",
+    name: 'Tender Hack',
+    year: '2021',
+  },
+  {
+    name: 'Human Hack',
+    year: '2022',
   },
 ];
 </script>

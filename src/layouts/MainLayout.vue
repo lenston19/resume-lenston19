@@ -1,15 +1,32 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header class="bg-transparent text-black" height-hint="98">
+    <q-header
+      class="bg-transparent text-black"
+      height-hint="98"
+    >
       <q-toolbar>
         <q-space />
-        <q-btn size="1.5rem" dense flat round icon="menu">
+        <q-btn
+          size="1.5rem"
+          dense
+          flat
+          round
+          icon="menu"
+        >
           <q-menu>
             <q-list>
-              <q-item to="/" clickable active-class="menu-link">
+              <q-item
+                to="/"
+                clickable
+                active-class="menu-link"
+              >
                 <q-item-section>Резюме</q-item-section>
               </q-item>
-              <q-item to="/projects" clickable active-class="menu-link">
+              <q-item
+                to="/projects"
+                clickable
+                active-class="menu-link"
+              >
                 <q-item-section>Проекты</q-item-section>
               </q-item>
             </q-list>
