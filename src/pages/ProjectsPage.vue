@@ -36,7 +36,7 @@ const projectList = <IProject[]>[
       github: '',
       description: 'Мультиязычный сайт для регистрации участников конференции.',
       contribution: 'Полная логика приложения, написание всего кода клиента',
-      technologies: 'Django, Django-i18n, Vue2, Splidejs.',
+      technologies: 'Django, Django-i18n, Vue2, Splidejs',
     },
   },
   {
@@ -49,7 +49,7 @@ const projectList = <IProject[]>[
         'Фонд выполняет функцию дополнительного финансирования Университета.',
       contribution:
         'Верстка страниц, создание темы отображения для сайта (Новый год и т.д.), реализация частичной логики приложения.',
-      technologies: 'Django, Vue2.',
+      technologies: 'Django, Vue2',
     },
   },
   {
@@ -60,7 +60,7 @@ const projectList = <IProject[]>[
       github: '',
       description: 'Cайт для регистрации участников олимпиады.',
       contribution: 'Реализация анимаций, верстка страниц',
-      technologies: 'Django, Vue2.',
+      technologies: 'Django, Vue2',
     },
   },
   {
@@ -72,7 +72,7 @@ const projectList = <IProject[]>[
       description:
         'Информационный сайт для абитурентов Ростовского Государственного Экономического Университета',
       contribution: 'Верстка страниц, реализация частичной логики приложения.',
-      technologies: 'Django, Vue2.',
+      technologies: 'Django, Vue2',
     },
   },
   {
@@ -84,7 +84,7 @@ const projectList = <IProject[]>[
       description:
         'Сайт предназначен для информирования пользователей о профессорском клубе РГЭУ(РИНХ)',
       contribution: 'Верстка страниц, реализация частичной логики приложения.',
-      technologies: 'Django, Vue3, Quasar Framework, TypeScript.',
+      technologies: 'Django, Vue3, Quasar Framework, TypeScript',
     },
   },
   {
@@ -96,7 +96,7 @@ const projectList = <IProject[]>[
       description:
         'Сайт предназначенный для проведения рейтинга студентов по разным направлениям. На его основе студентам выплачиваются дополнительная стипендия',
       contribution: 'Верстка страниц, реализация частичной логики приложения.',
-      technologies: 'Django, Vue3, Nuxt, Vuetify, TypeScript.',
+      technologies: 'Django, Vue3, Nuxt, Vuetify, TypeScript',
     },
   },
 ];

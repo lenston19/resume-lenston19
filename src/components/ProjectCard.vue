@@ -16,13 +16,20 @@
               </div>
             </q-item-label>
             <q-item-label class="q-py-sm">
-              <div class="text-body2">Вклад в проект:</div>
+              <div class="text-body1">Вклад в проект:</div>
               <div class="text-caption">
                 {{ project.content.contribution }}
               </div>
             </q-item-label>
-            <q-item-label overline>
-              {{ project.content.technologies }}
+            <q-item-label
+              overline
+              class="q-gutter-x-sm"
+            >
+              <q-badge
+                color="purple-9"
+                v-for="tech in project.content.technologies.split(',')"
+                :key="`tech-${tech}`"
+              >{{ tech }}</q-badge>
             </q-item-label>
           </q-item-section>
         </q-item>
