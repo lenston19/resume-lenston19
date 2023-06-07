@@ -16,10 +16,18 @@
               <div class="text-body1">
                 Разработка для меня является одновременно работой и хобби.
               </div>
+              <div class="text-body-1 q-my-sm">
+                Мной движет желание учиться новому и совершенствоваться в своих
+                навыках. Я всегда открыт для обратной связи и готов к
+                конструктивным диалогам в команде.
+              </div>
+              <div class="text-body1 q-my-sm">
+                Являюсь творческим и целеустремленным, всегда стремлюсь
+                создавать интерактивные и привлекательные пользовательские интерфейсы.
+              </div>
               <div class="text-body1">
-                Увлекаюсь детальным просмотром принципов работы систем, для
-                дальнейшего понимания взаимодействия с ее функционалом и
-                архитектурой.
+                Меня увлекает детальное изучение принципов работы систем с
+                целью лучшего понимания ее функциональности и архитектуры.
               </div>
             </ResumeCard>
 
@@ -27,7 +35,7 @@
               <div>
                 <div class="q-mb-sm flex justify-between">
                   <div class="text-h6">РГЭУ(РИНХ)</div>
-                  <div class="text-overline">(2018-2022)</div>
+                  <div class="text-overline">2018-2022</div>
                 </div>
                 <p class="text-body2 q-mb-sm">
                   Факультет компьютерных технологий и информационной безопасности
@@ -38,7 +46,7 @@
               <div>
                 <div class="q-mb-sm flex justify-between">
                   <div class="text-h6">РГЭУ(РИНХ)</div>
-                  <div class="text-overline">(2022-2024)</div>
+                  <div class="text-overline">2022-2024</div>
                 </div>
                 <p class="text-body2 q-mb-sm">
                   Институт магистратуры
@@ -135,7 +143,7 @@
                     v-for="link in linkList"
                     :key="link.url"
                     clicable
-                    class="col-12 col-sm-6"
+                    class="col-12 col-sm-4"
                     target="_blank"
                     :href="`https://${link.url}`"
                   >
@@ -186,6 +194,10 @@ const skillList = <ISkill[]>[
     alt: 'Quasar Framework',
   },
   {
+    src: 'vuetify.svg',
+    alt: 'Vuetify',
+  },
+  {
     src: 'ts.svg',
     alt: 'TypeScript',
   },
@@ -209,6 +221,11 @@ const linkList = <ILink[]>[
     type: 'url',
     icon: 'lab la-github',
   },
+  {
+    url: "codewars.com/users/lenston19",
+    type: "url",
+    icon: "las la-laptop-code",
+  },
 ];
 const hackathonList = <IHackathon[]>[
   {
@@ -222,6 +239,10 @@ const hackathonList = <IHackathon[]>[
   {
     name: 'Human Hack',
     year: '2022',
+  },
+  {
+    name: "RinhHack",
+    year: "2023",
   },
 ];
 </script>
