@@ -54,17 +54,6 @@
                 <p class="text-body2">Машинное обучение и технологии больших данных</p>
               </div>
             </ResumeCard>
-
-            <ResumeCard title="Опыт работы">
-              <q-list>
-                <q-item><q-item-section>
-                    <q-item-label overline>FullStack разработчик</q-item-label>
-                    <q-item-label>РГЭУ (РИНХ)</q-item-label>
-                    <q-item-label caption>Март 2021 — настоящее время</q-item-label>
-                  </q-item-section></q-item>
-              </q-list>
-            </ResumeCard>
-
             <ResumeCard title="Языки">
               <q-list>
                 <q-item>
@@ -110,6 +99,15 @@
                 </ol>
               </q-card-section>
             </ResumeCard>
+            <ResumeCard title="Опыт работы">
+              <q-list>
+                <q-item><q-item-section>
+                    <q-item-label overline>FullStack разработчик</q-item-label>
+                    <q-item-label>РГЭУ (РИНХ)</q-item-label>
+                    <q-item-label caption>Март 2021 — настоящее время</q-item-label>
+                  </q-item-section></q-item>
+              </q-list>
+            </ResumeCard>
             <ResumeCard title="Хакатоны">
               <q-list>
                 <q-item-label header>Призер:</q-item-label>
@@ -132,6 +130,7 @@
                 </q-item>
               </q-list>
             </ResumeCard>
+
           </div>
         </q-card-section>
         <q-card-section class="q-py-none">
@@ -222,9 +221,9 @@ const linkList = <ILink[]>[
     icon: 'lab la-github',
   },
   {
-    url: "codewars.com/users/lenston19",
-    type: "url",
-    icon: "las la-laptop-code",
+    url: 'codewars.com/users/lenston19',
+    type: 'url',
+    icon: 'las la-laptop-code',
   },
 ];
 const hackathonList = <IHackathon[]>[
@@ -241,8 +240,8 @@ const hackathonList = <IHackathon[]>[
     year: '2022',
   },
   {
-    name: "RinhHack",
-    year: "2023",
+    name: 'RinhHack',
+    year: '2023',
   },
 ];
 </script>
