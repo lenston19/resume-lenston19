@@ -23,7 +23,7 @@
             </q-item-label>
             <q-item-label
               overline
-              class="q-gutter-x-sm"
+              class="q-gutter-sm"
             >
               <q-badge
                 color="purple-9"
