@@ -142,12 +142,12 @@
                     v-for="link in linkList"
                     :key="link.url"
                     clicable
-                    class="col-12 col-sm-4"
+                    class="col-12 col-sm-4 ellipsis"
                     target="_blank"
                     :href="`https://${link.url}`"
                   >
                     <q-item-section>
-                      <div class="row items-center">
+                      <div class="row items-center ">
                         <q-icon
                           size="2rem"
                           :name="link.icon"
@@ -207,6 +207,14 @@ const skillList = <ISkill[]>[
   {
     src: 'nuxt.svg',
     alt: 'Nuxt',
+  },
+  {
+    src: 'django.svg',
+    alt: 'Django',
+  },
+  {
+    src: 'python.svg',
+    alt: 'Python',
   },
 ];
 const linkList = <ILink[]>[
